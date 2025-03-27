@@ -94,24 +94,6 @@ export async function GET(request: NextRequest) {
         contact_info: "联系电话: 0571-12345678",
         created_at: new Date().toISOString(),
         updated_at: new Date().toISOString()
-      },
-      {
-        id: "product_6",
-        name: "云南普洱茶",
-        region_id: "region_6", // 云南省
-        description: "普洱茶是云南特有的地理标志产品，具有独特的陈香，越陈越香，有'可以喝的古董'之称，具有降脂减肥、助消化等功效。",
-        origin: "云南省普洱市",
-        shipping_from: "云南省普洱市",
-        specifications: [
-          {name: "规格", value: "357g/饼"},
-          {name: "年份", value: "2020年"}
-        ],
-        notes: ["干燥通风处存放", "可长期保存"],
-        images: ["https://images.unsplash.com/photo-1594631054029-25cc0bd3a9de?q=80&w=800"],
-        ktt_link: "https://ktt.pinduoduo.com/groups/detail/example6",
-        contact_info: "联系电话: 0879-87654321",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
       }
     ];
     
