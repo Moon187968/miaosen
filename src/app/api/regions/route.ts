@@ -1,6 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createRegion, updateRegion, deleteRegion } from '@/lib/db';
 
+export async function GET(request: NextRequest) {
+  try {
+    const env = request.env as any;
+    
+    // 获取所有地区
+    const regions = await getAllRegions(env.DB);
+    
+    return NextResponse.json(regions);
+  } catch (error) {
+    console.error('获取地区数据失败:', error);
+    return NextResponse.json({ error: '获取地区数据失败' }, { status: 500 });
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const data = await request.json();
