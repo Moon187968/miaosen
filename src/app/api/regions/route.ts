@@ -24,7 +24,7 @@ export async function GET(request: NextRequest) {
         longitude: 121.4737,
         created_at: new Date() .toISOString(),
         updated_at: new Date().toISOString()
-      },
+      }
       // 更多省市...
     ];
     
