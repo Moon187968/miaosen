@@ -45,7 +45,7 @@ export async function GET(request: NextRequest) {
         id: "product_3",
         name: "广东凤凰单丛茶",
         region_id: "region_3", // 广东省
-        description: "凤凰单丛茶是广东省潮州市特产名茶，属于乌龙茶类，具有"色绿、香郁、味甘、形美"的特点，香气独特，有天然花香。",
+        description: "凤凰单丛茶是广东省潮州市特产名茶，属于乌龙茶类，具有色绿、香郁、味甘、形美的特点，香气独特，有天然花香。",
         origin: "广东省潮州市",
         shipping_from: "广东省潮州市凤凰镇",
         specifications: [
@@ -81,7 +81,7 @@ export async function GET(request: NextRequest) {
         id: "product_5",
         name: "浙江西湖龙井茶",
         region_id: "region_5", // 浙江省
-        description: "西湖龙井茶是中国十大名茶之一，产于浙江省杭州市西湖龙井村周围群山，具有"色绿、香郁、味甘、形美"四绝。",
+        description: "西湖龙井茶是中国十大名茶之一，产于浙江省杭州市西湖龙井村周围群山，具有色绿、香郁、味甘、形美四绝。",
         origin: "浙江省杭州市",
         shipping_from: "浙江省杭州市西湖区",
         specifications: [
@@ -99,7 +99,7 @@ export async function GET(request: NextRequest) {
         id: "product_6",
         name: "云南普洱茶",
         region_id: "region_6", // 云南省
-        description: "普洱茶是云南特有的地理标志产品，具有独特的陈香，越陈越香，有"可以喝的古董"之称，具有降脂减肥、助消化等功效。",
+        description: "普洱茶是云南特有的地理标志产品，具有独特的陈香，越陈越香，有可以喝的古董之称，具有降脂减肥、助消化等功效。",
         origin: "云南省普洱市",
         shipping_from: "云南省普洱市",
         specifications: [
