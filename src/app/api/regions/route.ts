@@ -3,10 +3,30 @@ import { createRegion, updateRegion, deleteRegion } from '@/lib/db';
 
 export async function GET(request: NextRequest) {
   try {
-    const env = request.env as any;
-    
-    // 获取所有地区
-    const regions = await getAllRegions(env.DB);
+    // 返回静态的中国省市数据，不依赖数据库
+    const regions = [
+      {
+        id: "region_1",
+        name: "北京市",
+        description: "中国首都，政治、文化、国际交往中心",
+        image: "https://images.unsplash.com/photo-1584646098378-0874589d76b1?q=80&w=800",
+        latitude: 39.9042,
+        longitude: 116.4074,
+        created_at: new Date() .toISOString(),
+        updated_at: new Date().toISOString()
+      },
+      {
+        id: "region_2",
+        name: "上海市",
+        description: "中国经济、金融、贸易、航运中心",
+        image: "https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?q=80&w=800",
+        latitude: 31.2304,
+        longitude: 121.4737,
+        created_at: new Date() .toISOString(),
+        updated_at: new Date().toISOString()
+      },
+      // 更多省市...
+    ];
     
     return NextResponse.json(regions);
   } catch (error) {
@@ -14,6 +34,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: '获取地区数据失败' }, { status: 500 });
   }
 }
+
 
 export async function POST(request: NextRequest) {
   try {
