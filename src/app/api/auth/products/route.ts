@@ -99,7 +99,7 @@ export async function GET(request: NextRequest) {
         id: "product_6",
         name: "云南普洱茶",
         region_id: "region_6", // 云南省
-        description: "普洱茶是云南特有的地理标志产品，具有独特的陈香，越陈越香，有"可以喝的古董"之称，具有降脂减肥、助消化等功效。",
+        description: "普洱茶是云南特有的地理标志产品，具有独特的陈香，越陈越香，有'可以喝的古董'之称，具有降脂减肥、助消化等功效。",
         origin: "云南省普洱市",
         shipping_from: "云南省普洱市",
         specifications: [
