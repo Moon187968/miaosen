@@ -33,20 +33,15 @@ export async function POST(request: NextRequest) {
     const expiresAt = new Date();
     expiresAt.setDate(expiresAt.getDate() + 7); // 7天后过期
     
-    // 返回用户信息和会话ID
-    return NextResponse.json({
-      id: user.id,
-      username: user.username,
-      role: user.role,
-      sessionId,
-      expiresAt: expiresAt.toISOString()
-    }, {
-      headers: {
-        'Set-Cookie': `session=${sessionId}; Path=/; HttpOnly; SameSite=Strict; Expires=${expiresAt.toUTCString()}`
-      }
+    return NextResponse.json({ 
+      success: true,
+      message: '登录成功'
     });
   } catch (error) {
     console.error('登录失败:', error);
-    return NextResponse.json({ error: '登录失败' }, { status: 500 });
+    return NextResponse.json({ 
+      success: false,
+      error: '登录失败，请检查用户名和密码'
+    }, { status: 401 });
   }
 }
